@@ -1,33 +1,90 @@
-#---------------------- EXO 1 ----------------------------------------
-#Écris une fonction qui prend une phrase et retourne une liste de tous les mots qui commencent par une voyelle.
+# import re
 
-def start_by_vowels():
-    sentence = "Bonjour je aime apprendre" 
-    splited_sentence = sentence.split()
-    vowels = "aeiouyAEIOU"
-    vowels_start =[]
+# #---------------------- EXO 1 ----------------------------------------
+# #Écris une fonction qui prend une phrase et retourne une liste de tous les mots qui commencent par une voyelle.
 
-    for s in sentence:
-        if s[0] in vowels:
-            vowels_start.append(s)
+# def start_by_vowels():
+#     sentence = "Bonjour j' aime apprendre" 
+#     splited_sentence = sentence.split()
+#     vowels = "aeiouyAEIOU"
+#     vowels_start =[]
 
-    return vowels_start
+#     for s in splited_sentence:
+#         if s[0] in vowels:
+#             vowels_start.append(s)
 
-print(start_by_vowels())
+#     return vowels_start
+
+# print(start_by_vowels())
 
 
 
-#---------------------- EXO 2 ----------------------------------------
-#Écris une fonction qui prend une phrase et retourne une liste de mots en minuscules, sans ponctuation.
+# #---------------------- EXO 2 ----------------------------------------
+# #Écris une fonction qui prend une phrase et retourne une liste de mots en minuscules, sans ponctuation.
 
-#---------------------- EXO 3 ----------------------------------------
-#Écris une fonction qui prend une phrase et retourne le nombre total de lettres (ignore les espaces et la ponctuation).
+# def tout_petit():
+#     phrase = "Bonjour, je Suis Camille!"
 
-#---------------------- EXO 4 ----------------------------------------
-#Écris une fonction qui prend une phrase et retourne une liste de tous les chiffres qu’elle contient.
+#     phrase = phrase.lower()
+#     phrase = re.sub(r"[^\w\s]", "", phrase)
+#     mots = phrase.split()
+    
+#     return mots
 
-#---------------------- EXO 5 ----------------------------------------
-#Écris une fonction qui prend une phrase et retourne une liste de tous les chiffres qu’elle contient.
+# print(tout_petit())
+
+# #---------------------- EXO 3 ----------------------------------------
+# #Écris une fonction qui prend une phrase et retourne le nombre total de lettres (ignore les espaces et la ponctuation).
+
+# def nombre_lettres():
+#     phrase = "Bonjour, je Suis Camille!"
+#     compteur = 0
+
+#     phrase = phrase.lower()
+#     phrase = re.sub(r"[^\w\s]", "", phrase)
+
+#     mots = phrase.split()
+
+#     for m in mots :
+#         compteur += len(m)
+
+#     return compteur
+
+# print(nombre_lettres())
+
+# #---------------------- EXO 4 ----------------------------------------
+# #Écris une fonction qui prend une phrase et retourne une liste de tous les chiffres qu’elle contient.
+
+# def sort_chiffres():
+
+#     sentence = "J’ai 2 chats et 5 poissons"
+#     chiffre_phrase = []
+#     sentence = sentence.split()
+
+#     for s in sentence :
+#         if s.isdigit():
+#             chiffre_phrase.append(s)
+#     return chiffre_phrase
+
+# print(sort_chiffres())
+
+# #---------------------- EXO 5 ----------------------------------------
+# #Écris une fonction qui prend une phrase et retourne une liste des mots de plus de 4 lettres.
+
+# def more_than_four():
+#     sentence = "Je mange une orange délicieuse"
+#     sentence = sentence.lower()
+#     word = sentence.split()
+
+#     four_of_more = []
+
+#     for w in word:
+#         if len(w) > 4: 
+#             four_of_more.append(w)
+
+#     return four_of_more
+
+# print(more_than_four())
 
 #---------------------- EXO 6 ----------------------------------------
 #Écris une fonction qui prend une phrase et retourne un dictionnaire avec le nombre d’occurrences de chaque mot, insensible à la casse.
