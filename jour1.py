@@ -206,4 +206,4 @@ def weird_sentence():
 
     return new_sentence
 
-print(weird_sentence())        
+print(weird_sentence())
