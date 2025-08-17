@@ -89,17 +89,95 @@
 #---------------------- EXO 6 ----------------------------------------
 #Écris une fonction qui prend une phrase et retourne un dictionnaire avec le nombre d’occurrences de chaque mot, insensible à la casse.
 
+def recurrence_mot():
+    mots = "Chat chat Chien"
+    recurrence = {}
+
+    mots = mots.lower()
+    mots = mots.split()
+
+    for m in mots:
+        if m in recurrence:
+            recurrence[m] += 1
+
+        else :
+            recurrence[m] = 1
+    return recurrence
+
+print(recurrence_mot())
+
 #---------------------- EXO 7 ----------------------------------------
 #Écris une fonction qui prend une phrase et une liste de mots à exclure, et retourne une liste de tous les mots sauf ceux à exclure, insensible à la casse.
+
+def exclure_mot():
+    phrase = "Je mange une pomme et un citron"
+    exclude = ["une", "et"]
+    new_thing = []
+
+    phrase = phrase.lower()
+    phrase = phrase.split()
+
+    for p in phrase:
+        if p not in exclude:
+            new_thing.append(p)
+    return new_thing
+
+print(exclure_mot())
 
 #---------------------- EXO 8 ----------------------------------------
 #Écris une fonction qui prend une phrase et retourne le mot qui apparaît le plus. Si plusieurs mots sont à égalité, retourne-les tous.
 
+def plus_apparu():
+    mots = "chat chien chat oiseau chien chat"
+    mots = mots.split()
+    compteur = {}
+
+    for m in mots:
+        if m in compteur:
+            compteur[m] += 1
+        else:
+            compteur[m] = 1
+
+    max_rep = max(compteur.values())
+    more = [mot for mot, nb in compteur.items() if nb == max_rep]
+
+    return more
+
+print(plus_apparu())
+
 #---------------------- EXO 9 ----------------------------------------
 #Écris une fonction qui prend une phrase et retourne la somme de tous les nombres présents dans la phrase.
 
+def sum_sentence():
+    sentence = "J’ai 2 chats et 5 poissons"
+    words = sentence.split()
+    total = 0
+
+    for w in words:
+        if w.isdigit():
+            total += int(w)
+    return total
+
+print (sum_sentence())
+
 #---------------------- EXO 10 ----------------------------------------
 #Écris une fonction qui prend une phrase et retourne une nouvelle phrase où chaque mot est inversé, mais l’ordre des mots reste le même.
+
+def inversed_sentence():
+    sentence = "Bonjour je cours"
+    sentence = sentence.lower()
+    mots = sentence.split()
+
+    invert_words = []
+    for mot in mots:
+        mot_inverse = mot[::-1]  
+        invert_words.append(mot_inverse)
+
+    result = " ".join(invert_words)
+
+    return result
+
+print(inversed_sentence())
 
 #---------------------- EXO 11 ----------------------------------------
 #Écris une fonction qui prend une phrase et retourne un dictionnaire où chaque mot est associé à sa longueur, insensible à la casse et sans doublons.
